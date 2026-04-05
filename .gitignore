@@ -1,51 +1,67 @@
 ```
-# Dependencies
-node_modules/
-
-# Build outputs
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+*.o
+*.obj
 dist/
 build/
 target/
 
-# TypeScript/JavaScript specific
-*.js.map
-*.tsbuildinfo
-.cache/
+# Dependencies
+.venv/
+venv/
+node_modules/
+.npm/
+.yarn/
+.pnpm/
 
-# Logs
+# Logs and temp files
 *.log
+*.tmp
+*.swp
+*.swo
 
-# Environment variables
+# Environment
 .env
 .env.local
 *.env.*
 
-# IDE specific
+# Editors
 .vscode/
 .idea/
-*.swp
-*.swo
+*.sublime-project
+*.sublime-workspace
 
-# OS generated files
+# OS
 .DS_Store
 Thumbs.db
 
-# Coverage reports
+# Coverage
 coverage/
 htmlcov/
-*.coverage
+.coverage
 
-# Python cache (if any Python files exist in project)
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
+# Python specific
+*.py[cod]
+*$py.class
+*.so
 .Python
+*.egg-info/
+.eggs/
 
-# Temporary files
-*.tmp
-*.temp
-*.bak
+# JavaScript/Node specific
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+*.min.js
+*.min.css
+bundle.js
+dist/
+out/
+build/
 
 # Compressed files
 *.zip
