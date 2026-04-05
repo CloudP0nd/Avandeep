@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vampire Survivors Clone</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #1a1a2e;
+            font-family: 'Arial', sans-serif;
+        }
+        canvas {
+            display: block;
+        }
+        #ui {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-size: 16px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            pointer-events: none;
+        }
+        #gameOver {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 48px;
+            text-align: center;
+            display: none;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
+        }
+        #restartBtn {
+            margin-top: 20px;
+            padding: 10px 30px;
+            font-size: 24px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a6f);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            pointer-events: auto;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+        #restartBtn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <div id="ui">
+        <div>Score: <span id="score">0</span></div>
+        <div>Level: <span id="level">1</span></div>
+        <div>HP: <span id="hp">100</span>/100</div>
+        <div>XP: <span id="xp">0</span>/<span id="nextLevel">100</span></div>
+    </div>
+    <div id="gameOver">
+        GAME OVER<br>
+        <button id="restartBtn">Restart</button>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
